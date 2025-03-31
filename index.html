@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Simple Attendance System</h2>
+        <p id="location-status">Checking location...</p>
+        <form id="attendance-form">
+            <label for="student-name">Student Name:</label>
+            <input type="text" id="student-name" required>
+            
+            <label for="grade">Grade:</label>
+            <input type="text" id="grade" required>
+            
+            <label for="strand">Strand:</label>
+            <input type="text" id="strand" required>
+            
+            <label for="attendance-status">Attendance Status:</label>
+            <select id="attendance-status" required>
+                <option value="present">Present</option>
+                <option value="late">Late</option>
+                <option value="absent">Absent</option>
+            </select>
+            
+            <button type="submit" id="submit-btn" disabled>Submit Attendance</button>
+        </form>
+
+        <h3>Attendance Records:</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Student Name</th>
+                    <th>Grade</th>
+                    <th>Strand</th>
+                    <th>Attendance Status</th>
+                    <th>Check-in Time</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody id="attendance-records"></tbody>
+        </table>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
